@@ -1,0 +1,35 @@
+
+    <div class="bg">
+        <div class="container">
+          <a mat-raised-button style="margin-right: 25px" href="/addrecipe">Add Recipe</a>
+          <a mat-raised-button href="">Recipe List</a>
+        </div>
+        <div class="input">
+          <form class="blog-form" [formGroup]="recipeForm" (ngSubmit)="addRecipe()">
+          <mat-form-field>
+            <mat-label>Recipe Name</mat-label>
+            <input matInput type="text" formControlName="recipeName" />
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label> Ingredients</mat-label>
+            <textarea matInput type="text" formControlName="ingredents"></textarea>
+          </mat-form-field>    
+          <mat-form-field>
+            <mat-label>Description</mat-label>
+            <textarea matInput type="text" formControlName="description"> </textarea>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="category">
+              @for (category of categoriesOfRecipe; track $index) {
+              <mat-option [value]="category">{{ category }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+          <div class="button">
+          <button type="submit">Submit</button>
+          </div>
+        </form>
+        </div>
+      
+      </div>

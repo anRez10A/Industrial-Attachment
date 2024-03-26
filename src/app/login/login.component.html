@@ -1,10 +1,52 @@
-<mat-form-field class="example-full-width">
-    <mat-label>Email</mat-label>
-    <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
-    @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-      <mat-error>Please enter a valid email address</mat-error>
-    }
-    @if (emailFormControl.hasError('required')) {
-      <mat-error>Email is <strong>required</strong></mat-error>
-    }
-  </mat-form-field>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="welcome">
+    Welcome to the World of Cooking
+</div>
+<div class="loginheader">
+Log into your account
+</div>
+<div class="input">
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+      @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+        <mat-error>Please enter a valid email address</mat-error>
+      }
+      @if (emailFormControl.hasError('required')) {
+        <mat-error>Email is <strong>required</strong></mat-error>
+      }
+    </mat-form-field>
+ 
+<br><br>
+
+</div>
+
+<div class="input">
+<form>
+    <div class="example-container">
+      <mat-form-field>
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+  
+  </div>
+  </form>
+
+</div>
+
+<div class="container">
+    <!-- <button mat-stroked-button type="submit">Log In</button> -->
+    <a mat-raised-button href="/dashboard">Log In</a>
+</div>
+<div>
+    <br>
+</div>
+<P class="container">
+    Don't Have and account <a href="/signup">SignUp</a> here
+</P>
+
+
+  
