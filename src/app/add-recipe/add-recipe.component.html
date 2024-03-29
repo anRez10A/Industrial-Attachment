@@ -1,11 +1,21 @@
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Navigation Bar -->
+<nav>
+  <label class="logo">DailyDelish</label>
+  <ul>
+    <li><a href="#">Recipe List</a></li>
+    <li><a href="#">About Us <i class="fa fa-usd" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+    
     <div class="bg">
-        <div class="container">
-          <a mat-raised-button style="margin-right: 25px" href="/addrecipe">Add Recipe</a>
-          <a mat-raised-button href="">Recipe List</a>
-        </div>
+
         <div class="input">
           <form class="blog-form" [formGroup]="recipeForm" (ngSubmit)="addRecipe()">
+            <p style="font-family: 'Times New Roman', Times, serif; text-align: center; color: rgba(0, 0, 0, 0.681); font-size: 25px; font-style: oblique;font-weight: bold;">Please Fill out the necessary Information</p>
+
           <mat-form-field>
             <mat-label>Recipe Name</mat-label>
             <input matInput type="text" formControlName="recipeName" />
@@ -26,9 +36,10 @@
               }
             </mat-select>
           </mat-form-field>
-          <div class="button">
-          <button type="submit">Submit</button>
-          </div>
+          <div class="container">
+            <!-- <button mat-stroked-button type="submit">Log In</button> -->
+            <a mat-raised-button href="/dashboard">Submit</a>
+        </div>
         </form>
         </div>
       

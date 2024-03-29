@@ -1,12 +1,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<div class="welcome">
+
+<!-- Navigation Bar -->
+<nav>
+  <label class="logo">DailyDelish</label>
+  <ul>
+    <li><a href="#">Sign up</a></li>
+    <li><a href="#">About Us <i class="fa fa-usd" aria-hidden="true"></i></a></li>
+  </ul>
+</nav>
+
+<!-- Note
+<div style="background:rgba(255, 0, 140, 0.544);padding:2px; display: flex; justify-content: center;text-align: center;">
+  <h4 style="text-align:center">Cooking is not just some recipies,it reflects the soul </h4>
+</div> -->
+
+<!-- Header -->
+<div class="header">
+  <!-- <h1>My Website</h1> -->
+  <div class="welcome">
     Welcome to the World of Cooking
+  </div>
+  <!-- <p>With love, <b>affection &</b> adore.</p> -->
 </div>
+
+
+
 <div class="loginheader">
 Log into your account
 </div>
+
+
+ <!-- frooooommmmmmmmmm -->
+
 <div class="input">
-    <mat-form-field class="example-full-width">
+  <form class="log-form">
+
+    <mat-form-field>
       <mat-label>Email</mat-label>
       <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
       @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
@@ -16,14 +45,7 @@ Log into your account
         <mat-error>Email is <strong>required</strong></mat-error>
       }
     </mat-form-field>
- 
-<br><br>
-
-</div>
-
-<div class="input">
-<form>
-    <div class="example-container">
+    
       <mat-form-field>
         <mat-label>Enter your password</mat-label>
         <input matInput [type]="hide ? 'password' : 'text'">
@@ -31,22 +53,31 @@ Log into your account
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
       </mat-form-field>
-  
-  </div>
-  </form>
 
-</div>
+
 
 <div class="container">
     <!-- <button mat-stroked-button type="submit">Log In</button> -->
     <a mat-raised-button href="/dashboard">Log In</a>
 </div>
-<div>
-    <br>
+
+</form>
 </div>
-<P class="container">
-    Don't Have and account <a href="/signup">SignUp</a> here
-</P>
+
+    <br>
+
+<div style="text-align: center;">
+<P>Don't Have and account? <a href="/signup">  SignUp</a> here</P>
+</div>
+<!-- Footer -->
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+<!-- ///jdhdgdgdgd -->
+<!-- 
 
 
-  
+
+
+   -->
