@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { JsonPipe } from '@angular/common';
 import { FormBuilder,ReactiveFormsModule, } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -15,7 +15,7 @@ import { Router, RouterModule } from '@angular/router';
 @Component({
   selector: 'app-add-recipe',
   standalone: true,
-  imports: [ReactiveFormsModule,
+  imports: [ReactiveFormsModule, 
     JsonPipe,
     MatFormFieldModule,
     MatInputModule,
@@ -31,23 +31,36 @@ import { Router, RouterModule } from '@angular/router';
 export class AddRecipeComponent {
   categoriesOfRecipe= ['Desert', 'Spicy', 'Drinks' , 'FastFood'];
   title: any;
+  recipeForm: any;
   
     constructor(
       private formBuilder: FormBuilder,
       private recipeService: RecipeService,
       private router: Router
     ) {}
-  recipeForm = this.formBuilder.group({
+
+    ngOnInit(): void {
+      this.initForm();
+    }
+
+
+    addRecipe() {
+      this.recipeService.addRecipe(this.recipeForm.value as Recipe).subscribe((res) => {
+        this.router.navigateByUrl('/home');
+      });
+    }
+
+    initForm(){
+  this.recipeForm = this.formBuilder.group({
       recipeName: '',
       ingredents: '',
       description: '',
       category: '',
       status: '',
     });
+
+  }
+
   
-    addRecipe() {
-      this.recipeService.addRecipe(this.recipeForm.value as Recipe).subscribe((res) => {
-        this.router.navigateByUrl('');
-      });
-    }
+  
 }

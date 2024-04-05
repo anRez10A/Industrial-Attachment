@@ -17,8 +17,8 @@ export class RecipeService {
     return this.httpClient.get<Recipe[]>(this.baseUrl);
   }
 
-  addRecipe(payload: Recipe) {
-    return this.httpClient.post(this.baseUrl, { ...payload, Status: 'Updated' });
+  addRecipe(Recipe: Recipe) {
+    return this.httpClient.post(this.baseUrl,Recipe);
   }
 
   deleteRecipe(id: string) {
@@ -27,3 +27,4 @@ export class RecipeService {
 
   
 }
+
