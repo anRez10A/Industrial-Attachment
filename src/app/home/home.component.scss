@@ -57,10 +57,11 @@ transition: .5s;
 color: white;
 }
 
+
 .all-recipes{
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Example column definition */
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
 justify-content: center; /* Change 'center' to 'start', 'end', 'space-between', 'space-around', or 'space-evenly' for different justifications */
-/* Additional grid properties */
-grid-gap: 10px; /* Adjust as needed */
+margin-top: 10px;
+grid-gap: 30px; 
 }

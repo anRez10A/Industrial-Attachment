@@ -1,6 +1,18 @@
 .example-card {
-  max-width: 400px;
-  margin: 5px;
+    max-width: 400px;
+    margin: 5px;
 
+  }
+
+.image{
+ align-items: center;
+ justify-content: center;
+ display: flex;
+ margin: 10px;
 }
 
+.all{
+  background: #9b0c869c;
+  border: 2px;
+  border-color: wheat;
+}

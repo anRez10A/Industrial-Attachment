@@ -53,7 +53,7 @@ export class AddRecipeComponent {
     initForm(){
   this.recipeForm = this.formBuilder.group({
       recipeName: '',
-      ingredents: '',
+      ingredients: '',
       description: '',
       category: '',
       status: '',
