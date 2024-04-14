@@ -1,128 +1,144 @@
 
 *{
-    padding: 0;
-  margin: 0;
-  text-decoration: none;
-  list-style: none;
-  box-sizing: border-box;
-  }
-  nav{
-  
-    background: #9b0c86bc;
-    height: 70px;
-    width: 100%;
-        }
-  
-  label.logo{
-    color: rgba(255, 255, 255, 0.842);
-    font-size: 30px;
-    line-height: 80px;
-    padding: 0 80px;
-    font-weight: bold;
-    font-style: oblique;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-  
-  nav ul{
-    float: right;
-    margin-right: 20px;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-  }
-  
-  nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-    // padding:0 50px;
-    
-  }
-  
-  nav ul li a{
-    color: white;
-  font-size: 17px;
-  text-transform: uppercase;
-  padding: 7px 13px;
-  border-radius: 3px;
-  }
-  
-  a:hover{
-    background: #9b0c869c;
-    border-radius: 0.3px;
-    transition: .5s;
-  color: white;
-  }
-  //navbar ends
-  
-  .welcome {
-          padding: 60px;
-          // font-size: 400%;
-          font-size:5vw;
-          color: #9b0c86;
-          // display: flex;
-          // justify-content: center;
-          width: 100%;
-          background-size: cover;
-          border-color: #9b0c8665;
-          border-radius: 0.3ch;
-          border-style: solid;
-          border-width: 8px;
-          font-style: italic;
-          font-family: Georgia, 'Times New Roman', Times, serif;
-          background: rgba(255, 255, 255, 0.604);
-      }
-  
-  
-  
-      .header {
-        padding: 100px;
-        width: 100%;
-        text-align: center;
-        // background: #1abc9c;
-        color: rgb(255, 255, 255);
-        background-image: url(../login/share-original-food-recipes-and-food-blogging.jpg);
-        position: relative;
-      }
-  
-      
-  
-      .loginheader {
-          font-size: 200%;
-          padding: 15px;
-          color: #9b0c86;
-          display: flex;
-          justify-content: center;
-          font-family: Georgia, 'Times New Roman', Times, serif;
-          margin-top: 10px;
-          font-style: oblique;
-      }
-  
-  
-  
-      
-    .container{
-  text-align: center;
-  // margin-left: 100px;
-  }
-  
-  .input{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .log-form{
-    margin-inline: 100px;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 300px
-  }
+  padding: 0;
+margin: 0;
+text-decoration: none;
+list-style: none;
+box-sizing: border-box;
+}
+nav{
 
-  .footer {
-    padding: 20px;
+  background: #9b0c86bc;
+  height: 70px;
+  width: 100%;
+      }
+
+label.logo{
+  color: rgba(255, 255, 255, 0.842);
+  font-size: 30px;
+  line-height: 80px;
+  padding: 0 80px;
+  font-weight: bold;
+  font-style: oblique;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav ul{
+  float: right;
+  margin-right: 20px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+}
+
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+  // padding:0 50px;
+  
+}
+
+nav ul li a{
+  color: white;
+font-size: 17px;
+text-transform: uppercase;
+padding: 7px 13px;
+border-radius: 3px;
+}
+
+a:hover{
+  background: #9b0c869c;
+  border-radius: 0.3px;
+  transition: .5s;
+color: white;
+}
+//navbar ends
+
+.welcome {
+        padding: 60px;
+        // font-size: 400%;
+        font-size:5vw;
+        color: #9b0c86;
+        // display: flex;
+        // justify-content: center;
+        width: 100%;
+        background-size: cover;
+        border-color: #9b0c8665;
+        border-radius: 0.3ch;
+        border-style: solid;
+        border-width: 8px;
+        font-style: italic;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background: rgba(255, 255, 255, 0.604);
+    }
+
+
+
+    .header {
+      padding: 100px;
+      width: 100%;
+      text-align: center;
+      // background: #1abc9c;
+      color: rgb(255, 255, 255);
+      background-image: url(../login/share-original-food-recipes-and-food-blogging.jpg);
+      position: relative;
+    }
+
+    
+
+    .loginheader {
+        font-size: 200%;
+        padding: 15px;
+        color: #9b0c86;
+        display: flex;
+        justify-content: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-top: 10px;
+        font-style: oblique;
+    }
+
+
+
+    
+  .container{
+    background-color: #ffffff;
+    border: none; 
+    color: #000000; 
+    padding: 15px 5px !important; 
     text-align: center;
-    background: #ddd;
-  }
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    transition: background-color 0.3s ease;
+}
+
+.container:hover {
+  background-color: #9b0c86; 
+  color: white;
+ }
+
+.input{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.log-form{
+  margin-inline: 100px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 300px
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}

@@ -4,8 +4,8 @@
 <nav>
   <label class="logo">DailyDelish</label>
   <ul>
-    <li><a href="/signup">Sign up</a></li>
-    <li><a href="#">About Us <i class="fa fa-usd" aria-hidden="true"></i></a></li>
+    <li><button mat-button (click)="navigeteTo('signup')">Sign Up</button></li>
+    <li><button mat-button (click)="navigeteTo('aboutus')">About Us</button></li>
   </ul>
 </nav>
 
@@ -37,18 +37,21 @@ Log into your account
 
     <mat-form-field>
       <mat-label>Email</mat-label>
-      <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
-      @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+      <input type="email" matInput [formControl]="email"  placeholder="Ex. pat@example.com">
+      @if (email.hasError('email') && !email.hasError('required')) {
         <mat-error>Please enter a valid email address</mat-error>
       }
-      @if (emailFormControl.hasError('required')) {
+      @if (email.hasError('required')) {
         <mat-error>Email is <strong>required</strong></mat-error>
       }
     </mat-form-field>
     
       <mat-form-field>
         <mat-label>Enter your password</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'">
+        <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password">
+        @if (email.hasError('required')) {
+          <mat-error>Password is <strong>required</strong></mat-error>
+        }
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
@@ -58,7 +61,8 @@ Log into your account
 
 <div class="container">
     <!-- <button mat-stroked-button type="submit">Log In</button> -->
-    <a mat-raised-button href="/home">Log In</a>
+    <!-- <a mat-raised-button href="/home">Log In</a> -->
+    <button style=" width: 100px; height: 30px;" type="button" (click)="authUser()">Log In</button>
 </div>
 
 </form>

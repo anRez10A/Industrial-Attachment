@@ -8,8 +8,8 @@
 <nav>
   <label class="logo">DailyDelish</label>
   <ul>
-    <li><a href="#">Log In</a></li>
-    <li><a href="#">About Us <i class="fa fa-usd" aria-hidden="true"></i></a></li>
+    <li><a [routerLink]="['/login']">Log In</a></li>
+    <li><a [routerLink]="['/aboutus']">About Us <i class="fa fa-usd" aria-hidden="true"></i></a></li>
   </ul>
 </nav>
 
@@ -37,11 +37,11 @@ You have to create an account first
  <!-- frooooommmmmmmmmm -->
 
 <div class="input">
-  <form class="log-form">
+  <form class="log-form" [formGroup]="userForm" (ngSubmit)="addUser()">
 
     <mat-form-field>
       <mat-label>Email</mat-label>
-      <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+      <input matInput type="text" formControlName="email" placeholder="Ex. pat@example.com">
       @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
         <mat-error>Please enter a valid email address</mat-error>
       }
@@ -52,12 +52,12 @@ You have to create an account first
 
     <mat-form-field>
       <mat-label>User Name</mat-label>
-      <input matInput placeholder="Ex. sRezwana">
+      <input matInput placeholder="Ex. sRezwana" formControlName="userName">
     </mat-form-field>
     
       <mat-form-field>
         <mat-label>Enter your password</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'">
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
@@ -65,10 +65,10 @@ You have to create an account first
 
 
 
-<div class="container">
+<div>
     <!-- <button mat-stroked-button type="submit">Log In</button> -->
-    <a mat-raised-button href="/dashboard">Sign In</a>
-</div>
+    <button  class="container" type="submit">Submit</button>
+  </div>
 
 </form>
 </div>
@@ -76,7 +76,7 @@ You have to create an account first
     <br>
 
 <div style="text-align: center;">
-<P>Don't Have and account? <a href="/signup">  Log In</a> here</P>
+<P>Don't Have and account? <a href="/login">  Log In</a> here</P>
 </div>
 <!-- Footer -->
 <div class="footer">

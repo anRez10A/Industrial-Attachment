@@ -13,7 +13,7 @@
     <div class="bg">
 
         <div class="input">
-          <form class="blog-form" [formGroup]="recipeForm" (ngSubmit)="addRecipe()">
+          <form class="recipe-form" [formGroup]="recipeForm" (ngSubmit)="addRecipe()">
             <p style="font-family: 'Times New Roman', Times, serif; text-align: center; color: rgba(0, 0, 0, 0.681); font-size: 25px; font-style: oblique;font-weight: bold;">Please Fill out the necessary Information</p>
 
           <mat-form-field>
@@ -22,7 +22,7 @@
           </mat-form-field>
           <mat-form-field>
             <mat-label> Ingredients</mat-label>
-            <textarea matInput type="text" formControlName="ingredents"></textarea>
+            <textarea matInput type="text" formControlName="ingredients"></textarea>
           </mat-form-field>    
           <mat-form-field>
             <mat-label>Description</mat-label>
@@ -36,9 +36,10 @@
               }
             </mat-select>
           </mat-form-field>
+
+
           <div class="container">
-            <!-- <button mat-stroked-button type="submit">Log In</button> -->
-            <a mat-raised-button href="/home">Submit</a>
+            <button mat-raised-button style="background: #9b0c8697;" type="submit">Submit</button>
         </div>
         </form>
         </div>

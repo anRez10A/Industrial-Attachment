@@ -1,39 +1,20 @@
-<div class="home-container">
-    <div class="all-Recipe">
-        <div fxLayout="row wrap">
-            <div class="top">
-                <h4>All Recipe</h4>
-            </div>
-            
-            <div class="recipe-grid">
-                <div class="movie-item" *ngFor="let recipe of popularRecipe">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-                    <mat-card class="example-card">
-                    <mat-card-header>
-                    <div class="name" (click)="goToRecipe(recipe._id)">
-                        <mat-card-title>{{ recipe.recipeName }}</mat-card-title>
+<!-- Navigation Bar -->
+<nav>
+  <label class="logo">DailyDelish</label>
+  <ul>
+    <li><a [routerLink]="['/addrecipe']">Add Recipe</a></li>
 
-                    </div>
-    
-                    <div class="detail">
-                        <div class="catagory" (click)="goToRecipe(recipe._id)">
-                            <mat-card-subtitle>{{recipe.category}}</mat-card-subtitle>
-                        </div>
-                    </div>
-                   </mat-card-header>
+    <li><a (click)="logout()">Log Out</a></li>
+    <li><a [routerLink]="['/aboutus']">About Us</a></li>
+  </ul>
+</nav>
 
-                  <mat-card-content>
-                    <p>{{recipe.ingredients}}</p>
-                  </mat-card-content>
-                  <mat-card-actions>
-                    <button mat-button>LIKE</button>
-                    <button mat-button>SHARE</button>
-                  </mat-card-actions>
-                  </mat-card>
-                </div>
-            </div>
-        </div>
-
-    </div>
+<div class="all-recipes">
+    @for(recipe of allRecipes; track $index){
+    <app-recipe-list [recipe]="recipe" (recipeDeleted)="deleteRecipe($event)"></app-recipe-list>
+    }
+  </div>
 
    

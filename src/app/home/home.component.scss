@@ -1,3 +1,66 @@
 .example-card {
-    max-width: 400px;
-  }
+  max-width: 400px;
+}
+
+
+*{
+padding: 0;
+margin: 0;
+text-decoration: none;
+list-style: none;
+box-sizing: border-box;
+}
+nav{
+
+background: #9b0c86bc;
+height: 70px;
+width: 100%;
+    }
+
+label.logo{
+color: rgba(255, 255, 255, 0.842);
+font-size: 30px;
+line-height: 80px;
+padding: 0 80px;
+font-weight: bold;
+font-style: oblique;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav ul{
+float: right;
+margin-right: 20px;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 20px;
+}
+
+nav ul li{
+display: inline-block;
+line-height: 80px;
+margin: 0 5px;
+// padding:0 50px;
+
+}
+
+nav ul li a{
+color: white;
+font-size: 17px;
+text-transform: uppercase;
+padding: 7px 13px;
+border-radius: 3px;
+}
+
+a:hover{
+background: #9b0c869c;
+border-radius: 0.3px;
+transition: .5s;
+color: white;
+}
+
+.all-recipes{
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Example column definition */
+justify-content: center; /* Change 'center' to 'start', 'end', 'space-between', 'space-around', or 'space-evenly' for different justifications */
+/* Additional grid properties */
+grid-gap: 10px; /* Adjust as needed */
+}
