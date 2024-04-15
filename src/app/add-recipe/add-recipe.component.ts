@@ -60,7 +60,10 @@ export class AddRecipeComponent {
     });
 
   }
-
+  logout(){
+    localStorage.removeItem("token");
+    this.router.navigateByUrl('/login');
+  }
   
   
 }

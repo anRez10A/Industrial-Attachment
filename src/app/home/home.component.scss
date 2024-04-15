@@ -1,6 +1,6 @@
-.example-card {
-  max-width: 400px;
-}
+// .example-card {
+//   max-width: 400px;
+// }
 
 
 *{
@@ -60,8 +60,9 @@ color: white;
 
 .all-recipes{
 display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-justify-content: center; /* Change 'center' to 'start', 'end', 'space-between', 'space-around', or 'space-evenly' for different justifications */
+grid-template-columns: repeat(auto-fill, minmax(300px)); 
+justify-content: center; 
 margin-top: 10px;
+margin-left: 300px;
 grid-gap: 30px; 
 }

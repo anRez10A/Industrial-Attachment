@@ -5,19 +5,16 @@
   <label class="logo">DailyDelish</label>
   <ul>
     <li><a [routerLink]="['/addrecipe']">Add Recipe</a></li>
+    <li><a [routerLink]="['/aboutus']">About Us</a></li>
 
     <li><a (click)="logout()">Log Out</a></li>
-    <li><a [routerLink]="['/aboutus']">About Us</a></li>
   </ul>
 </nav>
 
-<div class="bg">
 <div class="all-recipes">
     @for(recipe of allRecipes; track $index){
     <app-recipe-list [recipe]="recipe" (recipeDeleted)="deleteRecipe($event)"></app-recipe-list>
     }
   </div>
-
-</div>
 
    

@@ -6,11 +6,15 @@
           <mat-card-subtitle>{{recipe.category}}</mat-card-subtitle>
         </mat-card-header>
          <div class="image">
-          <img mat-card-xl-image src="https://img.freepik.com/free-vector/variety-food_23-2147513951.jpg" >
+          <img mat-card-image src="https://i.pinimg.com/736x/a8/a1/37/a8a137c178b32664a13351df3f5f712b.jpg" >
         </div>       
       <mat-card-content>
-        <p>
+        <p><b>Ingredients: </b>
         {{recipe.ingredients}}
+      </p>
+
+      <p><b>Instructions: </b>
+        {{recipe.description}}
       </p>
       </mat-card-content>
   
