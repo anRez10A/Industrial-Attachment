@@ -14,10 +14,14 @@ import { UserService } from '../user.service';
 import { User } from '../User.interface';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [FormsModule, MatIconModule,MatButtonModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule,RouterLink,RouterModule],
+  imports: [FormsModule, MatIconModule,MatButtonModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule,RouterLink,RouterModule,CommonModule],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.scss'
 })
@@ -48,14 +52,13 @@ ngOnInit(): void {
     });
   }
 
-  initForm() {
-    this.userForm = this.formBuilder.group({
-      userName: '',
-      email: '',
-      password: ''
-    });
-    
-  }
+ initForm() {
+ this.userForm = this.formBuilder.group({
+    userName: ['', [Validators.required, Validators.minLength(3)]], // At least 3 characters
+    email: ['', [Validators.required, Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(5)]] // At least 6 characters
+ });
+}
 
   navigeteTo(path:string){
     this.router.navigateByUrl(path);

@@ -37,41 +37,45 @@ You have to create an account first
  <!-- frooooommmmmmmmmm -->
 
 <div class="input">
-  <form class="log-form" [formGroup]="userForm" (ngSubmit)="addUser()">
+ <form class="log-form" [formGroup]="userForm" (ngSubmit)="addUser()">
 
+    <!-- Email Field -->
     <mat-form-field>
       <mat-label>Email</mat-label>
       <input matInput type="text" formControlName="email" placeholder="Ex. pat@example.com">
-      @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
-        <mat-error>Please enter a valid email address</mat-error>
-      }
-      @if (emailFormControl.hasError('required')) {
-        <mat-error>Email is <strong>required</strong></mat-error>
-      }
+      <mat-error *ngIf="userForm.controls.email.invalid && userForm.controls.email.touched">
+        Please enter a valid email address
+      </mat-error>
     </mat-form-field>
 
+    <!-- User Name Field -->
     <mat-form-field>
       <mat-label>User Name</mat-label>
       <input matInput placeholder="Ex. sRezwana" formControlName="userName">
+      <mat-error *ngIf="userForm.controls.userName.invalid && userForm.controls.userName.touched">
+        It must be at least 3 characters long
+      </mat-error>
     </mat-form-field>
     
-      <mat-form-field>
-        <mat-label>Enter your password</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-        </button>
-      </mat-form-field>
+    <!-- Password Field -->
+    <mat-form-field>
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+      <mat-error *ngIf="userForm.controls.password.invalid && userForm.controls.password.touched">
+        Password must be at least 5 characters long
+      </mat-error>
+    </mat-form-field>
 
+    <div>
+      <button class="container" type="submit" [disabled]="!userForm.valid">Submit</button>
+    </div>
 
-
-<div>
-    <!-- <button mat-stroked-button type="submit">Log In</button> -->
-    <button  class="container" type="submit">Submit</button>
-  </div>
-
-</form>
+ </form>
 </div>
+
 
     <br>
 
