@@ -6,7 +6,7 @@ import { DatePipe } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { RecipeService } from '../recipe.service';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import {RouterModule} from '@angular/router';
+import {Router, RouterModule} from '@angular/router';
 
 
 @Component({
@@ -27,7 +27,8 @@ export class RecipeListComponent {
 
     constructor(
         private recipeService: RecipeService,
-        private snackBar: MatSnackBar
+        private snackBar: MatSnackBar,
+        private router: Router
       ) {}
 
 
@@ -45,6 +46,9 @@ export class RecipeListComponent {
            },
         });
        }
-       
+      
+       recipeDetails(_id: string | any) {
+        this.router.navigate(['recipes', _id]);
+      }
 
 }

@@ -24,11 +24,13 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent {
   allRecipes: Recipe[] = [];
   id!: string;
- 
+ userName: string | any;
+
   constructor(private RecipeService: RecipeService,private router: Router) {}
   ngOnInit() {
     this.RecipeService.getAllRecipe().pipe(take(1)).subscribe((res) => {
       this.allRecipes = res;
+      this.userName = localStorage.getItem('name');
       // console.log(this.allRecipes);
     });
   }
@@ -39,6 +41,10 @@ export class HomeComponent {
 
   logout(){
     localStorage.removeItem("token");
+    localStorage.removeItem("name");
+
     this.router.navigateByUrl('/login');
   }
+
+  
 }

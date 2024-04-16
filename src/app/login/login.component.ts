@@ -26,7 +26,7 @@ export class LoginComponent {
   hide = true;
 
   email = new FormControl('', [Validators.required, Validators.email]);
-  password = new FormControl('', [Validators.required,Validators.minLength(6)]);
+  password = new FormControl('', [Validators.required,Validators.minLength(5)]);
 
   isFormValid = false;
 
@@ -41,7 +41,7 @@ export class LoginComponent {
   loginResponce: LoginResponce = {};
 
   authUser(){
-    console.log("thehhehsasaaa");
+    // console.log("thehhehsasaaa");
     const login: Login = {
       email: this.email.value!,
       password: this.password.value!,
@@ -50,6 +50,9 @@ export class LoginComponent {
       this.loginResponce = res;
       localStorage.setItem("token", this.loginResponce.token??'');
       if(this.loginResponce.success){
+
+        localStorage.setItem('name', this.loginResponce.name?? '');
+        
         this.router.navigateByUrl("/home");
       }
       else{

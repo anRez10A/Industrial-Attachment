@@ -11,6 +11,7 @@
   </ul>
 </nav>
 
+{{userName}}
 <div class="all-recipes">
     @for(recipe of allRecipes; track $index){
     <app-recipe-list [recipe]="recipe" (recipeDeleted)="deleteRecipe($event)"></app-recipe-list>

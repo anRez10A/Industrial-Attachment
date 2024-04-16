@@ -1,30 +1,37 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { RecipeService } from '../recipe.service';
+import { Recipe } from '../recipe.interface';
 
 @Component({
  selector: 'app-recipe-details',
  templateUrl: './recipe-details.component.html',
- styleUrls: ['./recipe-details.component.css']
+ styleUrls: ['./recipe-details.component.scss']
 })
 export class RecipeDetailsComponent implements OnInit {
- recipe: any;
+ recipe: Recipe = {};
+ recipes: any;
+  private _id: any;
 
  constructor(private route: ActivatedRoute, private recipeService: RecipeService) { }
+ ngOnInit(): void {
 
-ngOnInit(): void {
- const id = this.route.snapshot.paramMap.get('_id');
- if (id) { // Check if id is not null
-    this.recipeService.getRecipeById(id).subscribe(data => {
-      this.recipe = data;
-    }, error => {
-      console.error('Error fetching recipe:', error);
-      // Handle the error, e.g., show an error message or redirect
-    });
- } else {
-    // Handle the case where id is null, e.g., show an error message or redirect
-    console.error('Recipe ID is null');
-    // You might want to redirect the user or show an error message here
- }
+
+  this._id = this.route.snapshot.params['_id'];
+
+  this.recipeDetails();
+}
+
+ recipeDetails() {
+
+  this.recipeService.getAllRecipe().subscribe((res) => {
+    this.recipes = res;
+    let index = this.recipes.findIndex(
+      (res: { _id: string }) => this.recipe._id == this._id
+    );
+    if (index > -1) {
+      this.recipe = this.recipes[index];
+    }
+  });
 }
 }

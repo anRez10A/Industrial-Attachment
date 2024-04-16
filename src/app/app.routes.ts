@@ -7,7 +7,7 @@ import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { RecipeSearchComponent } from './recipe-search/recipe-search.component';
 import { RecipeListComponent } from './recipe-list/recipe-list.component';
 import { GuardService } from './guard.service';
-// import { RecipeDetailsComponent } from './recipe-details/recipe-details.component'; 
+import { RecipeDetailsComponent } from './recipe-details/recipe-details.component'; 
 
 
 export const routes: Routes = [
@@ -19,6 +19,6 @@ export const routes: Routes = [
     { path: "addrecipe",component: AddRecipeComponent,canActivate: [GuardService]},
     { path: "search",component: RecipeSearchComponent,canActivate: [GuardService]},
     { path: "recipelist",component: RecipeListComponent,canActivate: [GuardService]},
-    // { path: 'recipe/:id', component: RecipeDetailsComponent,canActivate: [GuardService]},
+    { path: 'recipes/:id', component: RecipeDetailsComponent,canActivate: [GuardService]},
 
 ];

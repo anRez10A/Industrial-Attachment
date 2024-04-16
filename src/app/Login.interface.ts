@@ -6,4 +6,5 @@ export interface Login {
 export interface LoginResponce{
   token?: string;
   success?: boolean;
+  name?: string;
 }
