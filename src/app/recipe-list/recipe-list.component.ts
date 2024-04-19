@@ -48,6 +48,7 @@ export class RecipeListComponent {
        }
       
        recipeDetails(_id: string | any) {
+        console.log(_id)
         this.router.navigate(['recipes', _id]);
       }
 

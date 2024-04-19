@@ -1,7 +1,27 @@
-<div>
-    <h2>{{ recipe.recipeName }}</h2>
-    <p>Category: {{ recipe.category }}</p>
-    <img [src]="" alt="Recipe Image">
-    <p>Ingredients: {{ recipe.ingredients }}</p>
-    <p>Description: {{ recipe.description }}</p>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Navigation Bar -->
+<nav>
+  <label class="logo">DailyDelish</label>
+  <ul>
+    <li><a [routerLink]="['/addrecipe']">Add Recipe</a></li>
+    <li><a [routerLink]="['/aboutus']">About Us</a></li>
+
+    <li><a (click)="logout()">Log Out</a></li>
+  </ul>
+</nav>
+
+<div class="bg-image"></div>
+
+<div class="recipe-details">
+    <div class="image">
+        <img mat-card-image src="https://i.pinimg.com/736x/a8/a1/37/a8a137c178b32664a13351df3f5f712b.jpg" >
+      </div>     
+      <div class="grid-items">
+    <h2>Recipe Name: {{ recipe.recipeName }}</h2>
+    <p> <b style="font-size: large;">Category:</b> {{ recipe.category }}</p>
+    <p><b style="font-size: large;">Ingredients:</b> {{ recipe.ingredients }}</p>
+    <p> <b style="font-size: large;"> Description: </b> {{ recipe.description }}</p>
+
+</div>
    </div>

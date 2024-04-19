@@ -1,32 +1,26 @@
-<div class="all">
+<div class="all" (click)="recipeDetails(recipe._id)">
   <mat-card class="example-card">
       <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
-         <div (click)="recipeDetails(recipe._id)">
          <mat-card-title>{{recipe.recipeName}}</mat-card-title>
-         </div> 
-          <div (click)="recipeDetails(recipe._id)">
-            <br>
+          
+         
+         
             <mat-card-subtitle>{{recipe.category}}</mat-card-subtitle>
-            </div>
+          
 
         </mat-card-header>
-         <div class="image" (click)="recipeDetails(recipe._id)">
+         <div class="image">
           <img mat-card-image src="https://i.pinimg.com/736x/a8/a1/37/a8a137c178b32664a13351df3f5f712b.jpg" >
         </div>       
       <mat-card-content>
-        <div (click)="recipeDetails(recipe._id)">
+        
         <p><b>Ingredients: </b>
         {{recipe.ingredients}}
       </p>
-    </div>
+ 
 
-    <div (click)="recipeDetails(recipe._id)">
-      <p><b>Instructions: </b>
-        {{recipe.description}}
-      </p>
-
-    </div>
+    
       </mat-card-content>
   
       <mat-card-actions>

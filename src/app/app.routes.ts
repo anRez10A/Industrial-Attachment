@@ -19,6 +19,6 @@ export const routes: Routes = [
     { path: "addrecipe",component: AddRecipeComponent,canActivate: [GuardService]},
     { path: "search",component: RecipeSearchComponent,canActivate: [GuardService]},
     { path: "recipelist",component: RecipeListComponent,canActivate: [GuardService]},
-    { path: 'recipes/:id', component: RecipeDetailsComponent,canActivate: [GuardService]},
+    { path: 'recipes/:_id', component: RecipeDetailsComponent,canActivate: [GuardService]},
 
 ];

@@ -1,0 +1,120 @@
+
+
+
+*{
+padding: 0;
+margin: 0;
+text-decoration: none;
+list-style: none;
+box-sizing: border-box;
+}
+
+nav{
+
+    background: #9b0c86bc;
+    height: 70px;
+    width: 100%;
+        }
+    
+    label.logo{
+    color: rgba(255, 255, 255, 0.842);
+    font-size: 30px;
+    line-height: 80px;
+    padding: 0 80px;
+    font-weight: bold;
+    font-style: oblique;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    nav ul{
+    float: right;
+    margin-right: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    }
+    
+    nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    // padding:0 50px;
+    
+    }
+    
+    nav ul li a{
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+    }
+    
+    a:hover{
+    background: #9b0c869c;
+    border-radius: 0.3px;
+    transition: .5s;
+    color: white;
+    }
+    
+    .recipe-details {
+        // max-width: 600px;
+        // margin: 0 auto;
+        // padding: 20px;
+        // text-align: center;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        column-gap: 100px;
+        position: absolute;
+
+        background: url(https://t4.ftcdn.net/jpg/04/33/38/31/360_F_433383199_z1mLbi6GTKBmrtauE7sToBWPSfTdkUGa.jpg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        height: 100%;
+
+
+    }
+       
+       
+
+        .image{
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            margin: 10px;
+
+          
+            
+        }
+        .grid-items{
+            background: #9b0c869c;
+            margin: 10px;
+            text-align: center;
+            min-width: 500px ;
+            min-height: 200px;
+            padding: 5px;
+            border-radius: 10px;
+            filter:drop-shadow(0 0 5px #00000040);
+            background-color: #9b0c869c;
+            // border-radius: 0.25rem;
+            // display: flex;
+            // flex-direction: column;
+            overflow: hidden;
+            padding-left: 30px;
+            background: repeating-linear-gradient(#0000 0 calc(1.2rem - 1px),#66afe1 0 1.2rem) right bottom /100% 100%,linear-gradient(red 0 0) 30px 0/2px 100% #fff;
+            background-repeat: no-repeat;
+            line-height: 1.2rem;
+            -webkit-mask:radial-gradient(circle .8rem at 2px 50%,#0000 98%,#000)0 0/100% 2.4rem;
+            font-family:monospace;
+            
+
+        }
+
+
+        
+p{
+   
+    margin: 1.2rem 0;
+}
+

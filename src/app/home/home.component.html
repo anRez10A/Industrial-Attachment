@@ -11,7 +11,9 @@
   </ul>
 </nav>
 
-{{userName}}
+<div class="name"> 
+  <h1>Welcome {{userName}} in DailyDelish</h1>
+ </div>
 <div class="all-recipes">
     @for(recipe of allRecipes; track $index){
     <app-recipe-list [recipe]="recipe" (recipeDeleted)="deleteRecipe($event)"></app-recipe-list>
